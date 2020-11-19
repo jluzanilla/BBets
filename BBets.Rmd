@@ -69,9 +69,9 @@ saveBANK=vector("numeric")
 for(j in 1:1000) { 
 bank=0
 for(i in 1:637) {
-  class=sample(daysY,size=27,replace=TRUE)
+  class=sample(daysY,size=28,replace=TRUE)
   n=length(unique(class)) 
-  if (n==27)bank=bank-2
+  if (n==28)bank=bank-2
   else bank=bank+1
 }
 saveBANK[j]=bank
@@ -84,6 +84,9 @@ saveBANK[j]=bank
 hist(saveBANK)
 print(mean(saveBANK))
 ```
+  
+Class should be 28 or 29 students for the 2:1 payoff to be fair. 
+  
 # In the class and payoff as described what is a 95% confidence interval for Brownlow's earnings?
   
 <!--Explain and display your method of coming up with a 95% confidence interval of  professor Brownlows winnings (or losings)-->
