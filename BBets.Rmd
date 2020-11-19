@@ -88,6 +88,29 @@ print(mean(saveBANK))
   
 <!--Explain and display your method of coming up with a 95% confidence interval of  professor Brownlows winnings (or losings)-->
 
+```{r}
+daysY=1:365
+saveBANK=vector("numeric")
+for(j in 1:1000) { 
+bank=0
+for(i in 1:637) {
+  class=sample(daysY,size=35,replace=TRUE)
+  n=length(unique(class)) 
+  if (n==35)bank=bank-2
+  else bank=bank+1
+}
+saveBANK[j]=bank
+}
+```
+
+ 
+
+```{r}
+hist(saveBANK)
+print(mean(saveBANK))
+```
+  
+Expected return would be around $281.
 
 # Discussion and Conclusion
 
